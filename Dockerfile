@@ -22,4 +22,4 @@ RUN make && \
 FROM ubuntu:20.04
 
 ## TODO: Change <Path in Builder Stage>
-COPY --from=builder /libfuzzer_bin/tester /
+COPY --from=builder /libxdc/libfuzzer_bin/tester /
