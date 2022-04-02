@@ -12,7 +12,7 @@ RUN git clone https://github.com/aquynh/capstone.git && \
     make install
 
 ## Add source code to the build stage.
-ADD . /libxdc
+COPY . /libxdc
 WORKDIR /libxdc
 
 RUN make && \
