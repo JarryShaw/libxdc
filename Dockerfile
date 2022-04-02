@@ -5,6 +5,12 @@ FROM ubuntu:20.04 as builder
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y cmake clang
 
+RUN git clone https://github.com/aquynh/capstone.git && \
+    cd capstone && \
+    git checkout v4 && \
+    make && \
+    make install
+
 ## Add source code to the build stage.
 ADD . /libxdc
 WORKDIR /libxdc
