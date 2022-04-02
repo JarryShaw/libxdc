@@ -9,10 +9,10 @@ cmds:
 
   # Command used to start the target, "@@" is the input file
   # (when "@@" is omitted Mayhem defaults to stdin inputs)
-  - cmd: /libxdc/libfuzzer_bin/tester
+  - cmd: tester
 
     ## Uncomment to change default dir (/) from which the target is invoked
-    #cwd: /
+    cwd: /libxdc/libfuzzer_bin/
 
     ## Uncomment the block below to define environment variables
     #env:
