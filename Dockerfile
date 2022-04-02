@@ -1,5 +1,5 @@
 # Build Stage
-FROM ubuntu:20.04 as builder
+FROM ubuntu:20.04
 
 ## Install build dependencies.
 RUN apt-get update && \
@@ -17,9 +17,6 @@ WORKDIR /libxdc
 
 RUN make && \
     bash compile_libfuzzer.sh
-
-# Package Stage
-FROM ubuntu:20.04
 
 ## TODO: Change <Path in Builder Stage>
 #COPY --from=builder /libxdc/libfuzzer_bin/tester /
