@@ -3,7 +3,7 @@ FROM ubuntu:20.04 as builder
 
 ## Install build dependencies.
 RUN apt-get update && \
-    DEBIAN_FRONTEND=noninteractive apt-get install -y cmake clang
+    DEBIAN_FRONTEND=noninteractive apt-get install -y cmake clang git
 
 RUN git clone https://github.com/aquynh/capstone.git && \
     cd capstone && \
